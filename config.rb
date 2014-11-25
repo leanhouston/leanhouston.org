@@ -74,7 +74,7 @@ end
 
 after_configuration do
   # Make Sprockets bower-aware
-  sprockets.append_path File.join(root, 'source/bower_components')
+  sprockets.append_path File.join(root, 'vendor/bower_components')
 
   # Bowser-based assets
   # sprockets.import_asset 'foundation'

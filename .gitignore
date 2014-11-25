@@ -11,4 +11,4 @@ tmtags
 /.sass-cache
 /.cache
 /build
-/source/bower_components/**/*
+/vendor/bower_components/**/*

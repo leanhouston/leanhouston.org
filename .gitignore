@@ -1,0 +1,14 @@
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.tmproj
+.DS_Store
+.env*
+tmtags
+
+/.node_modules
+/.bundle
+/.sass-cache
+/.cache
+/build
+/source/bower_components/**/*

@@ -1,0 +1,23 @@
+{
+  "name": "leanhouston",
+  "version": "0.0.0",
+  "authors": [
+    "Paul Kwiatkowski <paul@groupraise.com>"
+  ],
+  "description": "Houston Lean Startup Circle resources site.",
+  "main": "index.html",
+  "license": "WTFPL",
+  "homepage": "http://leanhouston.org",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/bower_components",
+    "test",
+    "tests",
+  ],
+  "dependencies": {
+    "foundation": "zurb/bower-foundation#~5.4.7"
+  }
+}

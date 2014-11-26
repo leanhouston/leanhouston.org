@@ -15,9 +15,10 @@
     "bower_components",
     "vendor/bower_components",
     "test",
-    "tests",
+    "tests"
   ],
   "dependencies": {
-    "foundation": "zurb/bower-foundation#~5.4.7"
+    "foundation": "zurb/bower-foundation#~5.4.7",
+    "breakpoint-sass": "~2.5.0"
   }
 }

@@ -1,0 +1,58 @@
+/******************************************************************************
+  SECTION: BREAKPOINTS
+******************************************************************************/
+$screen-sm-min:    0  ;
+$screen-sm-max:  640px;
+$screen-md-min:  641px;
+$screen-md-max: 1024px;
+$screen-lg-min: 1025px;
+$screen-lg-max: 1440px;
+$screen-xl-min: 1441px;
+$screen-xl-max: 1920px;
+$screen-xx-min: 1921px;
+
+$bp-sm: max-width $screen-sm-max;
+$bp-md: $screen-md-min $screen-md-max;
+$bp-lg: $screen-lg-min $screen-lg-max;
+$bp-xl: $screen-xl-min $screen-xl-max;
+$bp-xx: min-width $screen-xx-min;
+
+$bp-min-md: min-width $screen-md-min;
+$bp-min-lg: min-width $screen-lg-min;
+$bp-min-xl: min-width $screen-lg-min;
+
+$bp-max-md: max-width $screen-md-max;
+$bp-max-lg: max-width $screen-lg-max;
+$bp-max-xl: max-width $screen-xl-max;
+
+
+/******************************************************************************
+  SECTION: DISTANCES
+******************************************************************************/
+// Line Heights
+$lineh-tbs  : 1.428571429; // tbs => 'twitter bootstrap'
+$lineh-std  : 1.428671429; // tweaked slightly for better results with our font size choices.
+$lineh-close: 1.333333333;
+$lineh-far  : 1.5;
+
+
+/******************************************************************************
+  SECTION: FONT SIZES
+******************************************************************************/
+$fsize-std  : 1.8rem;
+$fsize-title: 2.8rem
+;$lineh-title: floor(($fsize-title * $lineh-std));
+$fsize-label: 2.2rem;
+$lineh-label: floor(($fsize-label * $lineh-std));
+$fsize-small: 1.4rem;
+$lineh-small: floor(($fsize-small * $lineh-std));
+
+/******************************************************************************
+  SECTION: COLORS
+******************************************************************************/
+// $body-text-color: #d0d8df;
+$body-text-color: #20282f;
+$body-bg-color  : #222222;
+$highlight-color: #0095DA;
+$dulllight-color: darken($highlight-color, 15%);
+

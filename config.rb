@@ -1,3 +1,6 @@
+require "lib/map_helper"
+helpers MapHelper
+
 ###
 # Compass
 ###

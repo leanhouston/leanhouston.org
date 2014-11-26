@@ -1,0 +1,19 @@
+## General Startup Resources
+
+### [Startup Houston (.com)](http://startuphouston.com/)
+A community news and blog (meaning you can write for it) and portal with links to many of the resources listed immediately below.
+
+### [Houston Startups Discussion](https://www.facebook.com/groups/houstonstartups/)
+The historical organizing point for Houston Startup community. No other single resource will keep you as involved, or connect you with as many people, as this one will.
+
+### [Startup Listing](https://www.facebook.com/notes/houston-startups/list-of-houston-startups/162095073874645)
+A document in the Houston Startups Facebook Group. List your startup so we know that you're Hustling in Houston!
+
+### [Startup Service Providers List](https://www.facebook.com/notes/houston-startups/startup-service-providers/164014337016052)
+A list of companies who work with startups such as software dev shops, agencies, design firms, consulting services and more. A document in the Houston Startups Facebook Group, community members are encouraged to list their services.
+
+### [Houston Digital Jobs](https://www.facebook.com/groups/houstondigitaljobs/)
+A sister group of the Houston Startups Discussion specifically meant as a jobs board. For both hiring and seeking!
+
+### [Startup Digest Calendar](https://www.startupdigest.com/digests/houston)
+Linked from StartupHouston.com, an awesome summary calendar for many of the events in the community. You can also subscribe to get the digest over email.

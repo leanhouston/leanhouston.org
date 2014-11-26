@@ -1,9 +1,30 @@
 ---
 ---
 
-<div class="welcome">
-  <h1>Coming Soon :)</h1>
-  <p class="doc">
-    This is only a Test Deployment
-  </p>
+<div class="header">
+  <div class="title-region">
+    <div class="logo">
+      LOGO
+    </div>
+    <div class="title">
+      Houston Lean Startup Circle
+    </div>
+  </div>
+
+  <div class="photo-banner">
+    <div class="hide-for-large-up">
+      <img src="images/metrorail_mobile.jpg">
+    </div>
+    <div class="show-for-large-up">
+      <img src="images/metrorail_banner.jpg">
+    </div>
+  </div>
+
+  <div class="links-bar">
+
+  </div>
 </div>
+
+<% data.startup_resources.sections.each do |section| %>
+  <%= partial(section, layout: :none) %>
+<% end -%>

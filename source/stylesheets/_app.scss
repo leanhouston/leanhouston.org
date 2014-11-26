@@ -1,55 +1,76 @@
 @charset "utf-8";
 
+/******************************************************************************
+  SECTION: BASE PAGE STRUCTURE
+******************************************************************************/
+html {
+  $fsize-base : 10px;
+  font-size   : $fsize-base;
+  // font-family : $font-family-sans-serif;
+  line-height : $lineh-std;
+  color       : $body-text-color;
+
+  @include breakpoint($bp-sm) {
+    font-size: 7.888888888px;
+  }
+  @include breakpoint($bp-md) {
+    font-size: 8.888888888px;
+  }
+  @include breakpoint($bp-lg) {
+    font-size: 8.888888888px;
+  }
+  @include breakpoint($bp-min-xl) {
+    font-size: 10px;
+  }
+}
+
 body {
-  background: #d4d4d4 url("../images/background.png");
-  text-align: center;
-  font-family: sans-serif; }
+  height          : 100%; // For fixed-footer wrapper
+  font-size       : $fsize-std;
+  line-height     : $lineh-std;
+  // font-family     : $font-family-sans-serif;
+  color           : $body-text-color;
+  // background-color: $body-bg-color;
+  background-image  : url(image-path('binding_light.png'));
+  background-repeat : repeat;
 
-h1 {
-  color: rgba(0, 0, 0, .3);
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  background: url("../images/middleman.png") no-repeat center 100px;
-  padding: 350px 0 10px;
-  margin: 0; }
+  p {
+    font-size  : $fsize-std;
+    line-height: $lineh-std;
+  }
+}
 
-.doc {
-  font-size: 14px;
-  margin: 0; }
-  .doc:before,
-  .doc:after {
-    opacity: .2;
-    padding: 6px;
-    font-style: normal;
-    position: relative;
-    content: "•"; }
-  .doc a {
-    color: rgba(0, 0, 0, 0.3); }
-    .doc a:hover {
-      color: #666; }
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
+/******************************************************************************
+  SECTION: BASE TAG STYLES
+******************************************************************************/
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
+a {
+  color: $highlight-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $dulllight-color;
+  text-decoration: none;
+}
+
+
+
+.header {
+
+  .title-region {
+
   }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
+
+  .logo {
+
   }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
+
+  .photo-banner {
+    max-width: 100%;
+    height: auto;
+    width: auto;
   }
-  to {
-    -webkit-transform: scale(1);
-  }
+
 }

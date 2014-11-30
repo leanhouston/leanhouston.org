@@ -1,4 +1,4 @@
-# Site Generating Files for leanhouston.org
+# Site Generator for leanhouston.org
 
 The source which generates the Houston Lean Startup Circle's resources website, [leanhouston.org](http://leanhouston.org). The page is generated using the [Middleman static site generator](http://middlemanapp.com/) and is hosted via Github Pages from the [leanhouston/leanhouston.github.io](https://github.com/leanhouston/leanhouston.github.io) repository.
 

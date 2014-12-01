@@ -39,9 +39,9 @@ $lineh-far  : 1.5;
 /******************************************************************************
   SECTION: FONT SIZES
 ******************************************************************************/
-$fsize-std  : 1.8rem;
-$fsize-title: 2.8rem
-;$lineh-title: floor(($fsize-title * $lineh-std));
+$fsize-std  : 1.6rem;
+$fsize-title: 2.8rem;
+$lineh-title: floor(($fsize-title * $lineh-std));
 $fsize-label: 2.2rem;
 $lineh-label: floor(($fsize-label * $lineh-std));
 $fsize-small: 1.4rem;
@@ -50,9 +50,23 @@ $lineh-small: floor(($fsize-small * $lineh-std));
 /******************************************************************************
   SECTION: COLORS
 ******************************************************************************/
+$offwhite       : #e0e8ef;
 // $body-text-color: #d0d8df;
 $body-text-color: #20282f;
 $body-bg-color  : #222222;
 $highlight-color: #0095DA;
 $dulllight-color: darken($highlight-color, 15%);
 
+/******************************************************************************
+  SECTION: FONTS
+******************************************************************************/
+@font-face{
+  font-family: 'Bebas Neue';
+  src: url('/fonts/BebasNeue-webfont.eot');
+  src: url('/fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/BebasNeue-webfont.woff') format('woff'),
+       url('/fonts/BebasNeue-webfont.ttf') format('truetype'),
+       url('/fonts/BebasNeue-webfont.svg#webfont') format('svg');
+}
+
+$font-family-sans-serif: 'Droid Sans', Arial, sans-serif;

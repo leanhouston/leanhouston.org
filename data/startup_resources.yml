@@ -1,10 +1,17 @@
 sections:
-  - general_resources
-  - coworking_and_cafes
-  - accelerators_and_incubators
-  - hackerspaces_and_makerspaces
-  - major_annual_events
-  - major_regular_events
-  # - media_and_press
-  # - funding_and_investment
-  # - staying_tuned_in
+  - :title: General Resources
+    :partial: general_resources
+  - :title: Major Regular Events
+    :partial: major_regular_events
+  - :title: Major Annual Events
+    :partial: major_annual_events
+  - :title: Coworking & Cafes
+    :partial: coworking_and_cafes
+  - :title: Accelerators & Incubators
+    :partial: accelerators_and_incubators
+  - :title: Hackerspaces & Makerspaces
+    :partial: hackerspaces_and_makerspaces
+  - :title: Funding & Investment
+    :partial: funding_and_investment
+  - :title: Media & Press
+    :partial: media_and_press

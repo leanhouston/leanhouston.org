@@ -2,11 +2,17 @@ module MapHelper
 
   def address_link(link_text = nil, address)
     link_text ||= address
-    # While we could use the following:
-    #   "[#{address}](#{map_url(address)})"
-    # it is more desirable to have a target=_blank, which pure markdown
-    # cannot provide.
     "<a href='#{map_url(address)}' target='_blank'>#{link_text}</a>"
+  end
+
+
+  def resource_address_link(location_name = nil, address)
+    partial(:resource_address_link, locals: {
+      has_name:       location_name != nil,
+      location_name:  location_name,
+      address:        address,
+      map_url:        map_url(address)
+    })
   end
 
 

@@ -1,0 +1,10 @@
+<a href='<%= map_url %>' target='_blank' class="address-link">
+  <span class="address-block">
+    <% if has_name %>
+      <span class="location-name"><%= location_name %></span><br>
+      <span class="address-text"><%= address %></span>
+    <% else %>
+      <span class="location-name"><%= address %></span>
+    <% end -%>
+  </span>
+</a>

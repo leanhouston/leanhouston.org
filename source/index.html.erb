@@ -1,13 +1,17 @@
----
----
-
 <div class="header">
   <div class="title-region">
     <div class="logo">
-      LOGO
-    </div>
-    <div class="title">
-      Houston Lean Startup Circle
+      <div class="hide-for-medium-up">
+        <img src="images/lean-circle-houston-offwhite-160.png" alt="Houston Lean Startup Circle" class="halfsize-image">
+      </div>
+      <div class="show-for-medium">
+        <img src="images/lean-circle-houston-offwhite-80.png" alt="Houston Lean Startup Circle">
+        <h1>Houston Startup Resources</h1>
+      </div>
+      <div class="show-for-large-up">
+        <img src="images/lean-circle-houston-offwhite-120.png" alt="Houston Lean Startup Circle">
+        <h1>Houston Startup Resources</h1>
+      </div>
     </div>
   </div>
 
@@ -21,10 +25,66 @@
   </div>
 
   <div class="links-bar">
-
+    <div class="links-group">
+    <%= partial('links_bar_item', locals: { text: 'NEWS',
+          href: 'http://startuphouston.com/' }) %>
+    <%= partial('links_bar_item', locals: { text: 'MEETUP',
+          href: 'http://www.meetup.com/leanhouston/' }) %>
+    <%= partial('links_bar_item', locals: { text: 'DISCUSSION',
+          href: 'https://www.facebook.com/groups/houstonstartups/' }) %>
+    </div>
+    <div class="links-group">
+    <%= partial('links_bar_item', locals: { text: 'JOBS',
+          href: 'https://www.facebook.com/groups/houstondigitaljobs/' }) %>
+    <%= partial('links_bar_item', locals: { text: 'EVENTS',
+          href: 'http://acceleratehouston.com/' }) %>
+    <%= partial('links_bar_item', locals: { text: 'TECH',
+          href: '#' }) %>
+    </div>
   </div>
 </div>
 
-<% data.startup_resources.sections.each do |section| %>
-  <%= partial(section, layout: :none) %>
-<% end -%>
+
+<div class="resource-listing">
+  <% data.startup_resources.sections.each do |section| %>
+    <div class="resource-group" id="<%= section['partial'] %>">
+      <div class="small-12 medium-10 large-8 medium-centered columns">
+        <h2><%= section['title'] %></h2>
+      </div>
+      <div class="small-12 medium-12 large-10 medium-centered columns">
+        <hr class="heading-underline">
+      </div>
+      <div class="small-12 medium-10 large-8 medium-centered columns">
+        <%= partial(section['partial'], layout: :none) %>
+      </div>
+    </div>
+  <% end -%>
+</div>
+
+
+<div class="footer-row">
+  <div class="small-12 medium-10 large-8 medium-centered columns">
+    <div class="text-right">
+      <div class="footer-credits">
+        <a href="http://www.groupraise.com" target="_blank">
+          Curated with love by GroupRaise
+        </a>
+      </div>
+      <div class="footer-credits">
+        <a href="https://github.com/leanhouston/leanhouston.org/blob/master/LICENSE.md" target="_blank">
+          Licensed under the WTFPL
+        </a>
+      </div>
+      <div class="footer-credits">
+        <a href="https://github.com/leanhouston/leanhouston.org" target="_blank">
+          Contribute via Github
+        </a>
+      </div>
+      <div class="footer-credits htown">
+        <a href="https://twitter.com/hashtag/fyha" target="_blank">
+          Represent that H-Town
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

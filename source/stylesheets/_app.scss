@@ -6,7 +6,7 @@
 html {
   $fsize-base : 10px;
   font-size   : $fsize-base;
-  // font-family : $font-family-sans-serif;
+  font-family : $font-family-sans-serif;
   line-height : $lineh-std;
   color       : $body-text-color;
 
@@ -28,7 +28,7 @@ body {
   height          : 100%; // For fixed-footer wrapper
   font-size       : $fsize-std;
   line-height     : $lineh-std;
-  // font-family     : $font-family-sans-serif;
+  font-family     : $font-family-sans-serif;
   color           : $body-text-color;
   // background-color: $body-bg-color;
   background-image  : url(image-path('binding_light.png'));
@@ -37,6 +37,11 @@ body {
   p {
     font-size  : $fsize-std;
     line-height: $lineh-std;
+    font-family: $font-family-sans-serif;
+  }
+
+  a, h1, h2, h3, h4, h5, h6, span {
+    font-family: $font-family-sans-serif;
   }
 }
 
@@ -44,6 +49,10 @@ body {
 /******************************************************************************
   SECTION: BASE TAG STYLES
 ******************************************************************************/
+
+.ilblock {
+  display: inline-block;
+}
 
 a {
   color: $highlight-color;
@@ -55,22 +64,241 @@ a:hover {
   text-decoration: none;
 }
 
+.halfsize-image {
+  width: 50%;
+  height: 50%;
+}
 
 
 .header {
 
   .title-region {
-
+    background-color: #222222;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: $offwhite;
   }
 
   .logo {
+    text-align: center;
+    display: inline-block;
+    img {
+      vertical-align: middle;
+      display: inline-block;
+    }
+    h1 {
+      font-family: 'Bebas Neue', Arial, sans-serif;
+      font-size: 5.4rem;
+      line-height: 5.4rem;
+      vertical-align: middle;
+      color: $offwhite;
+      margin: 0;
+      display: inline-block;
+      margin: 0 0 0 2rem;
 
+      @include breakpoint($bp-min-lg) {
+        font-size: 6rem;
+        line-height: 6rem;
+      }
+    }
   }
 
   .photo-banner {
     max-width: 100%;
     height: auto;
     width: auto;
+    overflow: hidden;
+    @include breakpoint($bp-max-md) {
+      border-top: 1px solid $highlight-color;
+      // border-bottom: 1px solid $highlight-color;
+    }
+    @include breakpoint($bp-min-lg) {
+      border-top: 2px solid $highlight-color;
+      // border-bottom: 1px solid $highlight-color;
+    }
   }
 
+  .links-bar {
+    @include grid-row(nest-collapse);
+    @include breakpoint($bp-max-md) {
+      border-top: 1px solid $highlight-color;
+    }
+    @include breakpoint($bp-min-lg) {
+      border-top: 2px solid $highlight-color;
+    }
+  }
+
+  .links-bar-link {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    &:hover {
+      .links-bar-item {
+        background-color: $highlight-color;
+      }
+      color: $offwhite;
+    }
+
+    &:last-child {
+      .links-bar-item {
+        @include breakpoint($bp-max-md) {
+          border-right: 1px solid $highlight-color;
+        }
+      }
+    }
+
+    &:first-child {
+      .links-bar-item {
+        @include breakpoint($bp-max-md) {
+          border-left: 1px solid $highlight-color;
+        }
+      }
+    }
+  }
+
+  .links-bar-item {
+
+    text-align: middle;
+    min-height: 3rem;
+    text-align: center;
+    background-color: #222222;
+  }
+
+  .links-bar-item {
+    @include breakpoint($bp-max-md) {
+      @include grid-column(4);
+      font-size: $fsize-label;
+      line-height: $lineh-label;
+      border-bottom: 1px solid $highlight-color;
+      // border-left: 1px solid $highlight-color;
+      border-right: 1px solid $highlight-color;
+    }
+  }
+
+  .links-bar-item {
+    @include breakpoint($bp-min-lg) {
+      @include grid-column(2);
+      font-size: $fsize-title;
+      line-height: $lineh-title;
+      border-bottom: 2px solid $highlight-color;
+      border-left: 0;
+      border-right: 0;
+    }
+  }
+
+}
+
+hr {
+  border: 0;
+  background-color: #222222;
+  height: 0.2rem;
+  margin: 2rem auto;
+}
+
+.resource-group {
+  @include grid-row(nest-collapse);
+
+  h2 {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 4.0rem;
+    margin-bottom: 0;
+    margin-top: 2.0rem;
+  }
+
+  hr.heading-underline {
+    border: 0;
+    background-color: #222222;
+    height: 0.2rem;
+    margin: 0 auto 1rem;
+  }
+
+  h3 {
+    color: $highlight-color;
+    margin: 2rem 0 0 0;
+  }
+
+  p {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .address-link {
+    display: inline-block;
+    .address-block {
+      display: inline-block;
+      // padding-left: 1.2rem;
+      @include breakpoint($bp-min-md) {
+      // padding-left: 1.6rem;
+      }
+    }
+    .location-name  {
+      display: inline-block;
+      color: $dulllight-color;
+    }
+    .address-text   {
+      display: inline-block;
+      color: $body-text-color;
+    }
+
+    &:hover {
+      .location-name  {
+        color: $body-text-color;
+      }
+      .address-text   {
+        color: $body-text-color;
+      }
+    }
+  }
+}
+
+
+.nc-row {
+  @include grid-row(nest-collapse);
+}
+
+
+.footer-row {
+  // $footer-dark  : desaturate(darken($highlight-color, 20%), 20%);
+  // $footer-faded : desaturate(darken($highlight-color, 20%), 50%);
+
+  $footer-dark  : #777777;
+  $footer-faded : #777777;
+
+  @include grid-row(nest-collapse);
+
+  color: $footer-faded;
+  background-color: #222222;
+  margin-top: 6rem;
+  padding: 1rem 0;
+
+  @include breakpoint($bp-max-md) {
+    border-top: 1px solid $highlight-color;
+  }
+  @include breakpoint($bp-min-lg) {
+    border-top: 2px solid $highlight-color;
+  }
+
+  a {
+    color: $footer-faded;
+    // text-decoration: underline;
+  }
+  a:hover {
+    color: $highlight-color;
+    text-decoration: none;
+  }
+
+  .htown a {
+    text-decoration: none;
+  }
+
+  .footer-credits {
+    // font-size: $fsize-small;
+    // line-height: $lineh-small;
+    padding: 0 0 0.2rem 0;
+  }
+}
+
+ul {
+  font-size: $fsize-std;
+  line-height: $lineh-std;
+  margin-bottom: 1.25rem;
+  list-style-position: inside;
 }

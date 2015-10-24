@@ -8,8 +8,17 @@ Contribution should be made via Github. Please fork this project, create a topic
 
 Information for each section is stored in its own, similarly-named file under the `/source` directory, such as `/source/_accelerators_and_incubators.md.erb`. The guidelines to contribute are best summarized as:
 
-1. Look at the pattern of how information is laid out in terms of links, addresses, length of content and so forth. 
-2. Then, try and stick to that pattern when contributing. 
+1. Look at the pattern of how information is laid out in terms of links, addresses, length of content and so forth.
+2. Then, try and stick to that pattern when contributing.
 3. When adding new items to a section, please place them below existing resources, and in the spirit of the "matching current style", use an `<h3>` tag (in Markdown: `###`) which links to the resources website, followed by a one- or two-sentence description.
 
 The information is generated via Markdown (`.md`), after passing through Embedded Ruby (`.erb`) to utilize helpers, such as conveniently changing Address into links to their location on a map.  Additionally, to make an address link to its map, the pattern of `<%= address_link("YOUR ADDRESS HERE") %>` is available.
+
+### Development and Deployment
+
+This project uses an older version of Middleman than the current (i.e. 3.X, where current is 4.X). However, many of the details are similar. To run in development mode:
+
+1. Have a Ruby version installed compliant with the .ruby-version file.
+2. Have some JavaScript environment (for middleman asset building).
+3. Run `bundle install` and wait.
+4. Start the development server by running `bundle exec middleman server`.

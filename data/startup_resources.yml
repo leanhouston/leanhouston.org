@@ -11,6 +11,8 @@ sections:
     :partial: accelerators_and_incubators
   - :title: Hackerspaces & Makerspaces
     :partial: hackerspaces_and_makerspaces
+  - :title: Talent & Hiring
+    :partial: talent_and_hiring
   - :title: Funding & Investment
     :partial: funding_and_investment
   - :title: Media & Press
